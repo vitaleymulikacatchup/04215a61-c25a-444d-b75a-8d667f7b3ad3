@@ -5,6 +5,7 @@ import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import SplitAbout from '@/components/sections/about/SplitAbout';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterBase from '@/components/sections/footer/FooterBase';
+import { Award, Lightbulb } from 'lucide-react';
 
 const assetMap: { id: string; url: string; alt?: string }[] = [
   { "id": "hero-image", "url": "https://images.pexels.com/photos/2953806/pexels-photo-2953806.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "A rainy window view from a train in Tallinn, Estonia, capturing an atmospheric and moody landscape." },
@@ -46,8 +47,8 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <SplitAbout
             bulletPoints={[
-              { title: "History", description: "Rich cultural heritage", icon: "Award" },
-              { title: "Innovation", description: "Leader in technology", icon: "Lightbulb" }
+              { title: "History", description: "Rich cultural heritage", icon: Award },
+              { title: "Innovation", description: "Leader in technology", icon: Lightbulb }
             ]}
             imageSrc={assetMap.find(a => a.id === 'about-image')?.url ?? '/public/images/placeholder.webp'}
           />
